@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  node-backend:
+    build:
+      context: ./node-backend
+    container_name: node-backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./node-backend:/usr/src/app  # Mount the node-backend directory
+  
+  frontend-prod:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:3000
+    container_name: frontend-prod
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
