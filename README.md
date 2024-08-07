@@ -1,5 +1,7 @@
 # Weather App
 
+Demo: (make sure to use http://, https:// is not setup). http://weather-app-alb-865442402.us-east-1.elb.amazonaws.com/
+
 This is a weather forecasting application built using Next.js for the frontend and Node.js for the backend. The application fetches weather data from the OpenWeatherMap API and displays it to the users. The app is containerized using Docker and can be deployed to AWS ECS using AWS CDK.
 
 ## Table of Contents
