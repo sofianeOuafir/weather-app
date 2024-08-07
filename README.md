@@ -24,7 +24,7 @@ This is a weather forecasting application built using Next.js for the frontend a
 ### Cloning the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/sofianeOuafir/weather-app
 cd weather-app
 ```
 
