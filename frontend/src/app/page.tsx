@@ -68,7 +68,6 @@ const Home: React.FC = () => {
     <div className="p-4 max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">Weather forecast</h1>
       <CitySelector onSelectCity={setSelectedCity} />
-      {!selectedCity && <p>Please select a city to see the forecast</p>}
       {selectedCity && weather && (
         <div>
           <CurrentWeather weather={weather} />
@@ -89,7 +88,7 @@ const Home: React.FC = () => {
           )}
         </div>
       )}
-      {showForecast && forecast && <WeatherForecast forecast={forecast} />}
+      {selectedCity && showForecast && forecast && <WeatherForecast forecast={forecast} />}
     </div>
   );
 };
